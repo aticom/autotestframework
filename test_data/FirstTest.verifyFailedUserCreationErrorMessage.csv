@@ -1,0 +1,4 @@
+admin_username,admin_password,username,password1,password2,email,error_message
+lvivatglance,qwerty123,selenium,qwerty,qwerty,andriy.zelenyuk@eleks.com,The name selenium is already taken.
+lvivatglance,qwerty123,selenium,qwerty,qwerty, ,E-mail address field is required.
+lvivatglance,qwerty123,sel,qwerty,qwert,andriy.zelenyuk@eleks.com,The specified passwords do not match.

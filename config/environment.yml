@@ -1,0 +1,21 @@
+environments:
+
+     local:
+      scheme: http
+      host: atico-design.com
+      port: 80
+
+     development:
+      scheme: http
+      host: localhost
+      port: 80
+
+     test:
+      scheme: http
+      host: localhost
+      port: 80
+      
+     production:
+      scheme: http
+      host: kosivceramics.com
+      port: 80

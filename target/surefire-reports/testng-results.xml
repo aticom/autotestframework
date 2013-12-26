@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="com.eleks.autotestframework.tests.FirstTest" duration-ms="38075" started-at="2013-12-26T14:37:08Z" finished-at="2013-12-26T14:37:46Z">
+    <groups>
+    </groups>
+    <test name="Command line test d707605a-39c4-478e-aab3-97fb9bbfd5f5" duration-ms="38075" started-at="2013-12-26T14:37:08Z" finished-at="2013-12-26T14:37:46Z">
+      <class name="com.eleks.autotestframework.tests.FirstTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@29345550]" name="setUp" is-config="true" duration-ms="9761" started-at="2013-12-26T16:36:58Z" finished-at="2013-12-26T16:37:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyFailedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@29345550]" name="verifyFailedUserCreationErrorMessage" duration-ms="12917" started-at="2013-12-26T16:37:08Z" data-provider="CsvDataProvider" finished-at="2013-12-26T16:37:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password1=qwerty, username=selenium, password2=qwerty, email=andriy.zelenyuk@eleks.com, admin_password=qwerty123, error_message=The name selenium is already taken., admin_username=lvivatglance}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFailedUserCreationErrorMessage -->
+        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@29345550]" name="logoutUser" is-config="true" duration-ms="1684" started-at="2013-12-26T16:37:20Z" finished-at="2013-12-26T16:37:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutUser -->
+        <test-method status="PASS" signature="verifyFailedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@29345550]" name="verifyFailedUserCreationErrorMessage" duration-ms="10004" started-at="2013-12-26T16:37:22Z" data-provider="CsvDataProvider" finished-at="2013-12-26T16:37:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password1=qwerty, username=selenium, password2=qwerty, email= , admin_password=qwerty123, error_message=E-mail address field is required., admin_username=lvivatglance}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFailedUserCreationErrorMessage -->
+        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@29345550]" name="logoutUser" is-config="true" duration-ms="1625" started-at="2013-12-26T16:37:32Z" finished-at="2013-12-26T16:37:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutUser -->
+        <test-method status="PASS" signature="verifyFailedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@29345550]" name="verifyFailedUserCreationErrorMessage" duration-ms="10003" started-at="2013-12-26T16:37:34Z" data-provider="CsvDataProvider" finished-at="2013-12-26T16:37:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password1=qwerty, username=sel, password2=qwert, email=andriy.zelenyuk@eleks.com, admin_password=qwerty123, error_message=The specified passwords do not match., admin_username=lvivatglance}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFailedUserCreationErrorMessage -->
+        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@29345550]" name="logoutUser" is-config="true" duration-ms="1829" started-at="2013-12-26T16:37:44Z" finished-at="2013-12-26T16:37:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutUser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@29345550]" name="tearDown" is-config="true" duration-ms="213" started-at="2013-12-26T16:37:46Z" finished-at="2013-12-26T16:37:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.eleks.autotestframework.tests.FirstTest -->
+    </test> <!-- Command line test d707605a-39c4-478e-aab3-97fb9bbfd5f5 -->
+  </suite> <!-- com.eleks.autotestframework.tests.FirstTest -->
+</testng-results>

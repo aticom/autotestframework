@@ -7,6 +7,7 @@ import com.eleks.autotestframework.core.Environment;
 import com.eleks.autotestframework.core.web.Webpage;
 import com.eleks.autotestframework.core.web.elements.Button;
 import com.eleks.autotestframework.core.web.elements.Link;
+import com.eleks.autotestframework.core.web.elements.RadioButton;
 import com.eleks.autotestframework.core.web.elements.Text;
 import com.eleks.autotestframework.core.web.elements.TextInput;
 
@@ -45,6 +46,20 @@ public class CreateUserPage extends Webpage<CreateUserPage>{
 		getEmailInput().inputText(email);
 		getPasswordInput1().inputText(password1);
 		getPasswordInput2().inputText(password2);
+		//getBlockRadioButton().click(); //
+		//getCreateNewAccountButton().click(); vruchnu klikajemo inshym metodom
+		
+		return this;
+	}
+	
+	
+public CreateUserPage fillInFormWithBlockedUser(String userName, String password1, String password2, String email){
+		
+		getUserNameInput().inputText(userName);
+		getEmailInput().inputText(email);
+		getPasswordInput1().inputText(password1);
+		getPasswordInput2().inputText(password2);
+		getBlockRadioButton().click(); //
 		//getCreateNewAccountButton().click(); vruchnu klikajemo inshym metodom
 		
 		return this;
@@ -53,6 +68,11 @@ public class CreateUserPage extends Webpage<CreateUserPage>{
 	public String getPageErrorMessage(){
 		
 		return new Text(driver, By.xpath("//div[contains(@class, 'messages error')]/ul/li")).getText();
+	}
+	
+	public String getPageMessageStatus(){
+		
+		return new Text(driver, By.xpath(".//*[@id='primary']/div/div[4]/div")).getText();
 	}
 	
 	public CreateUserPage submitFormExpectingError(){
@@ -90,5 +110,21 @@ public class CreateUserPage extends Webpage<CreateUserPage>{
 	public Link getLogOutLinkEND(){
 		return new Link(driver, By.xpath("//a[contains(@href, '/logout')]"));
 	}
+	
+	private RadioButton getBlockRadioButton(){
+		return new RadioButton(driver, By.id("edit-status-0"));
+	}
+	
+	///////////
+	public UsersPage goToUsersPage(){
+		getUsersLink().click();
+		return new UsersPage(driver).waitUntilAvailable();
+	}
+	
+		
+	public Link getUsersLink(){
+		return new Link(driver, By.xpath("//a[contains(@href, '/admin/user/user')]"));
+	}
+	
 
 }

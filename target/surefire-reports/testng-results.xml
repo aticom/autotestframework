@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="com.eleks.autotestframework.tests.FirstTest" duration-ms="47649" started-at="2013-12-26T16:06:08Z" finished-at="2013-12-26T16:06:56Z">
+  <suite name="com.eleks.autotestframework.tests.SecondTest" duration-ms="30100" started-at="2014-02-06T17:54:39Z" finished-at="2014-02-06T17:55:09Z">
     <groups>
     </groups>
-    <test name="Command line test 0ba5758b-3486-43a9-bdf7-3571ca2f03ab" duration-ms="47649" started-at="2013-12-26T16:06:08Z" finished-at="2013-12-26T16:06:56Z">
-      <class name="com.eleks.autotestframework.tests.FirstTest">
-        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@6ae80f0d]" name="setUp" is-config="true" duration-ms="7505" started-at="2013-12-26T18:06:01Z" finished-at="2013-12-26T18:06:08Z">
+    <test name="Command line test f5470248-1ca0-40f3-8d0d-6dc81167344e" duration-ms="30100" started-at="2014-02-06T17:54:39Z" finished-at="2014-02-06T17:55:09Z">
+      <class name="com.eleks.autotestframework.tests.SecondTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.eleks.autotestframework.tests.SecondTest@7685dfcf]" name="setUp" is-config="true" duration-ms="5904" started-at="2014-02-06T19:54:33Z" finished-at="2014-02-06T19:54:39Z">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,50 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyFailedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@6ae80f0d]" name="verifyFailedUserCreationErrorMessage" duration-ms="11053" started-at="2013-12-26T18:06:08Z" data-provider="CsvDataProvider" finished-at="2013-12-26T18:06:20Z">
+        <test-method status="PASS" signature="verifyFailedBlockedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.SecondTest@7685dfcf]" name="verifyFailedBlockedUserCreationErrorMessage" duration-ms="28161" started-at="2014-02-06T19:54:39Z" data-provider="CsvDataProvider" finished-at="2014-02-06T19:55:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password1=qwerty, username=selenium2, password2=qwerty, email=andriy.zelenyuk2@eleks.com, admin_password=qwerty123, error_message=Created a new user account for selenium2. No e-mail has been sent., admin_username=lvivatglance}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFailedBlockedUserCreationErrorMessage -->
+        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.SecondTest@7685dfcf]" name="logoutUser" is-config="true" duration-ms="1938" started-at="2014-02-06T19:55:07Z" finished-at="2014-02-06T19:55:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutUser -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.eleks.autotestframework.tests.SecondTest@7685dfcf]" name="tearDown" is-config="true" duration-ms="222" started-at="2014-02-06T19:55:09Z" finished-at="2014-02-06T19:55:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.eleks.autotestframework.tests.SecondTest -->
+    </test> <!-- Command line test f5470248-1ca0-40f3-8d0d-6dc81167344e -->
+  </suite> <!-- com.eleks.autotestframework.tests.SecondTest -->
+  <suite name="com.eleks.autotestframework.tests.FirstTest" duration-ms="56101" started-at="2014-02-06T17:53:37Z" finished-at="2014-02-06T17:54:33Z">
+    <groups>
+    </groups>
+    <test name="Command line test c6811990-fe4b-4d7d-a956-854631394f27" duration-ms="56101" started-at="2014-02-06T17:53:37Z" finished-at="2014-02-06T17:54:33Z">
+      <class name="com.eleks.autotestframework.tests.FirstTest">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@3e677646]" name="setUp" is-config="true" duration-ms="5957" started-at="2014-02-06T19:53:31Z" finished-at="2014-02-06T19:53:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[local]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyFailedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@3e677646]" name="verifyFailedUserCreationErrorMessage" duration-ms="13421" started-at="2014-02-06T19:53:37Z" data-provider="CsvDataProvider" finished-at="2014-02-06T19:53:50Z">
           <params>
             <param index="0">
               <value>
@@ -34,11 +77,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFailedUserCreationErrorMessage -->
-        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@6ae80f0d]" name="logoutUser" is-config="true" duration-ms="1741" started-at="2013-12-26T18:06:20Z" finished-at="2013-12-26T18:06:21Z">
+        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@3e677646]" name="logoutUser" is-config="true" duration-ms="2154" started-at="2014-02-06T19:53:50Z" finished-at="2014-02-06T19:53:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutUser -->
-        <test-method status="PASS" signature="verifyFailedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@6ae80f0d]" name="verifyFailedUserCreationErrorMessage" duration-ms="9618" started-at="2013-12-26T18:06:21Z" data-provider="CsvDataProvider" finished-at="2013-12-26T18:06:31Z">
+        <test-method status="PASS" signature="verifyFailedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@3e677646]" name="verifyFailedUserCreationErrorMessage" duration-ms="12011" started-at="2014-02-06T19:53:52Z" data-provider="CsvDataProvider" finished-at="2014-02-06T19:54:04Z">
           <params>
             <param index="0">
               <value>
@@ -49,11 +92,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFailedUserCreationErrorMessage -->
-        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@6ae80f0d]" name="logoutUser" is-config="true" duration-ms="1392" started-at="2013-12-26T18:06:31Z" finished-at="2013-12-26T18:06:32Z">
+        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@3e677646]" name="logoutUser" is-config="true" duration-ms="2011" started-at="2014-02-06T19:54:04Z" finished-at="2014-02-06T19:54:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutUser -->
-        <test-method status="PASS" signature="verifyFailedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@6ae80f0d]" name="verifyFailedUserCreationErrorMessage" duration-ms="10500" started-at="2013-12-26T18:06:32Z" data-provider="CsvDataProvider" finished-at="2013-12-26T18:06:43Z">
+        <test-method status="PASS" signature="verifyFailedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@3e677646]" name="verifyFailedUserCreationErrorMessage" duration-ms="12022" started-at="2014-02-06T19:54:06Z" data-provider="CsvDataProvider" finished-at="2014-02-06T19:54:18Z">
           <params>
             <param index="0">
               <value>
@@ -64,11 +107,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFailedUserCreationErrorMessage -->
-        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@6ae80f0d]" name="logoutUser" is-config="true" duration-ms="1856" started-at="2013-12-26T18:06:43Z" finished-at="2013-12-26T18:06:45Z">
+        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@3e677646]" name="logoutUser" is-config="true" duration-ms="1737" started-at="2014-02-06T19:54:18Z" finished-at="2014-02-06T19:54:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutUser -->
-        <test-method status="PASS" signature="verifyFailedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@6ae80f0d]" name="verifyFailedUserCreationErrorMessage" duration-ms="9756" started-at="2013-12-26T18:06:45Z" data-provider="CsvDataProvider" finished-at="2013-12-26T18:06:54Z">
+        <test-method status="PASS" signature="verifyFailedUserCreationErrorMessage(java.util.Map)[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@3e677646]" name="verifyFailedUserCreationErrorMessage" duration-ms="10955" started-at="2014-02-06T19:54:20Z" data-provider="CsvDataProvider" finished-at="2014-02-06T19:54:31Z">
           <params>
             <param index="0">
               <value>
@@ -79,15 +122,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFailedUserCreationErrorMessage -->
-        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@6ae80f0d]" name="logoutUser" is-config="true" duration-ms="1720" started-at="2013-12-26T18:06:54Z" finished-at="2013-12-26T18:06:56Z">
+        <test-method status="PASS" signature="logoutUser()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@3e677646]" name="logoutUser" is-config="true" duration-ms="1775" started-at="2014-02-06T19:54:31Z" finished-at="2014-02-06T19:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutUser -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@6ae80f0d]" name="tearDown" is-config="true" duration-ms="216" started-at="2013-12-26T18:06:56Z" finished-at="2013-12-26T18:06:56Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.eleks.autotestframework.tests.FirstTest@3e677646]" name="tearDown" is-config="true" duration-ms="231" started-at="2014-02-06T19:54:33Z" finished-at="2014-02-06T19:54:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.eleks.autotestframework.tests.FirstTest -->
-    </test> <!-- Command line test 0ba5758b-3486-43a9-bdf7-3571ca2f03ab -->
+    </test> <!-- Command line test c6811990-fe4b-4d7d-a956-854631394f27 -->
   </suite> <!-- com.eleks.autotestframework.tests.FirstTest -->
 </testng-results>

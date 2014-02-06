@@ -18,25 +18,29 @@ import com.eleks.autotestframework.core.web.pages.AdminHomePage;
 import com.eleks.autotestframework.core.web.pages.AdministerPage;
 import com.eleks.autotestframework.core.web.pages.CreateUserPage;
 import com.eleks.autotestframework.core.web.pages.LoginPage;
+import com.eleks.autotestframework.core.web.pages.UsersPage;
 
 
-public class FirstTest extends BaseTest {
+public class SecondTest extends BaseTest {
 	
-	//Commented out the FIRST TEST
+	
 	@Test(dataProvider = "CsvDataProvider", dataProviderClass = CsvDataProvider.class)
-	public void verifyFailedUserCreationErrorMessage(Map<String, String> testData) {
+	public void verifyFailedBlockedUserCreationErrorMessage(Map<String, String> testData) throws InterruptedException {
 		
 		
 		
 		CreateUserPage targetPage =  new AdminHomePage(driver).loadAsAnonymousUser().loginAs(testData.get("admin_username"), testData.get("admin_password"))
-		.goToAdministerPage().goToUserManagementPage().goToUsersPage().goToCreateUserPage().fillInForm(testData.get("username"), testData.get("password1"), testData.get("password2"), testData.get("email"))
+		.goToAdministerPage().goToUserManagementPage().goToUsersPage().goToCreateUserPage().fillInFormWithBlockedUser(testData.get("username"), testData.get("password1"), testData.get("password2"), testData.get("email"))
 		.submitFormExpectingError();
 		
 		//CreateUserPage targetPage =  new AdminHomePage(driver).loadAsAnonymousUser().loginAs("lvivatglance", "paroldo ekaunta")
 		//.goToAdministerPage().goToUserManagementPage().goToUsersPage().goToCreateUserPage().fillInForm("selenium", "qwerty", "qwerty", "email@mail.com")
 		//.submitFormExpectingError(); //my zaminyly na dani jaki my tiagnemo z csv failu
 		
-		assertThat("Page error message should be as expected", targetPage.getPageErrorMessage(), is(equalTo(testData.get("error_message"))));
+		assertThat("Page message should be as expected", targetPage.getPageMessageStatus(), is(equalTo(testData.get("error_message"))));
+		
+		//--------------------------------------toDO----
+		 targetPage.goToUsersPage().deleteUser();
 		
 		//Thread.sleep(5000);
 		
@@ -48,7 +52,6 @@ public class FirstTest extends BaseTest {
 		//Thread.sleep(5000);		
 	}	
 	
-	//Commented out the first test
 	@AfterMethod(alwaysRun = true)
 	public void logoutUser(){
 		new CreateUserPage(driver).logoutUser();

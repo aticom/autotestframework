@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.eleks.autotestframework.tests.FirstTest
--------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 55.857 sec - in com.eleks.autotestframework.tests.FirstTest

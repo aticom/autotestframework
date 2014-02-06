@@ -32,6 +32,13 @@
   	</dependency>
   	<dependency>
   		<groupId>org.seleniumhq.selenium</groupId>
+  		<artifactId>selenium-support</artifactId>
+  		<version>2.37.1</version>
+  		<scope>system</scope>
+		<systemPath>D:\Javapractise\work\autotestframework\selenium-support-2.37.1.jar</systemPath>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.seleniumhq.selenium</groupId>
   		<artifactId>selenium-chrome-driver</artifactId>
   		<version>2.37.1</version>
   	</dependency>
